@@ -3,6 +3,8 @@ import 'package:islami_project/home/home_screen.dart';
 import 'package:islami_project/quran_details/quran_details_screen.dart';
 
 void main() {
+
+  //new version
   runApp(const MyApp());
 }
 
