@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_project/quran_details/quranchapter.dart';
 
+import '../style/AppStyle.dart';
+
 class QuranDetailsScreen extends StatefulWidget {
   static const String routeName = "qurandetails";
 
@@ -19,7 +21,10 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/default_bg.png"),
+            image: AssetImage(AppStyle.isDark
+                    ? "assets/images/home_dark_background.png"
+                    :  "assets/images/default_bg.png"
+            ),
             fit: BoxFit.fill,
           )
 

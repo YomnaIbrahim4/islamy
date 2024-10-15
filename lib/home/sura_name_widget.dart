@@ -25,27 +25,21 @@ class SuraNameWidget extends StatelessWidget {
             child: Text(
               suraName,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
           Container(
-            height: 30,
+            height: 40,
             width: 2,
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.onPrimaryContainer,
             ),
           ),
           Expanded(
             child: Text(
               suraNumber.toString(),
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
         ],
