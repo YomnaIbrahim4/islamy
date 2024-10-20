@@ -3,6 +3,7 @@ import 'package:islami_project/home/tabs/ahadeth_tab.dart';
 import 'package:islami_project/home/tabs/quran_tab.dart';
 import 'package:islami_project/home/tabs/radio_tab.dart';
 import 'package:islami_project/home/tabs/sebha_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "Home";
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
         child: Scaffold(
           appBar: AppBar(
-            title: Text("Islami"),
+            title: Text(AppLocalizations.of(context)!.app_name),
           ),
           body: tabs[selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
@@ -48,28 +49,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: ImageIcon(
                         AssetImage("assets/images/icon_quran.png"),
                     ),
-                  label: "Quran",
+                  label: AppLocalizations.of(context)!.quran,
                 ),
                 BottomNavigationBarItem(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                     icon: ImageIcon(
                         AssetImage("assets/images/icon_hadeth.png"),
                     ),
-                  label: "Ahadeth",
+                  label:AppLocalizations.of(context)!.ahadeth,
                 ),
                 BottomNavigationBarItem(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                     icon: ImageIcon(
                         AssetImage("assets/images/icon_sebha.png"),
                     ),
-                  label: "Tasbeeh",
+                  label: AppLocalizations.of(context)!.tasbeeh,
                 ),
                 BottomNavigationBarItem(
                   backgroundColor: Theme.of(context).colorScheme.primary,
                     icon: ImageIcon(
                         AssetImage("assets/images/icon_radio.png"),
                     ),
-                  label: "Radio",
+                  label: AppLocalizations.of(context)!.radio,
                 ),
               ],
           ),
