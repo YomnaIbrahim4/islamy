@@ -57,20 +57,13 @@ class _SebhaTabState extends State<SebhaTab> with TickerProviderStateMixin{
         ),
         Text(
           "عدد التسبيحات",
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 25,
-          ),
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         Container(
           padding: EdgeInsets.all(20),
           child: Text(
             counter.toString(),
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w400,
-              color: Colors.black,
-            ),
+            style: Theme.of(context).textTheme.bodySmall,
           ),
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.secondary,
@@ -83,14 +76,10 @@ class _SebhaTabState extends State<SebhaTab> with TickerProviderStateMixin{
             padding: EdgeInsets.all(10),
             child: Text(
               text,
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-              ),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.onPrimaryContainer,
               borderRadius: BorderRadius.circular(30),
             ),
           ),
