@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islami_project/ahadeth_details/ahadeth_details_screen.dart';
 import 'package:islami_project/home/home_screen.dart';
 import 'package:islami_project/quran_details/quran_details_screen.dart';
 import 'package:islami_project/style/AppStyle.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
 
@@ -18,6 +20,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale("en"), // English
+        Locale("ar"), // Arabic
+      ],
+      locale: Locale("ar"),
       theme: AppStyle.lightTheme,
       darkTheme: AppStyle.darkTheme,
       themeMode: AppStyle.isDark

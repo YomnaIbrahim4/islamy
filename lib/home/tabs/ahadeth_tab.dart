@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_project/ahadeth_details/ahadeth_details_screen.dart';
 import 'package:islami_project/home/hadeth.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AhadethTab extends StatefulWidget {
 
@@ -26,8 +27,8 @@ class _AhadethTabState extends State<AhadethTab> {
                Image.asset("assets/images/hadith_header.png")),
         Divider(),
         Text(
-          "Ahadeth",
-          style: Theme.of(context).textTheme.titleMedium,
+          AppLocalizations.of(context)!.ahadeth,
+          style:  Theme.of(context).textTheme.titleMedium,
         ),
         Divider(),
         Expanded(
