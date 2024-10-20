@@ -28,10 +28,7 @@ class _AhadethTabState extends State<AhadethTab> {
         Divider(),
         Text(
           AppLocalizations.of(context)!.ahadeth,
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w600,
-          ),
+          style:  Theme.of(context).textTheme.titleMedium,
         ),
         Divider(),
         Expanded(
@@ -44,10 +41,7 @@ class _AhadethTabState extends State<AhadethTab> {
                   child: Text(
                       ahadethList[index].title,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 25,
-                    ),
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),
                 separatorBuilder: (context, index) => SizedBox(height: 10,),
