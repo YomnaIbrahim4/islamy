@@ -6,6 +6,9 @@ import 'package:islami_project/home/tabs/sebha_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_project/home/tabs/settings_tab.dart';
 import 'package:islami_project/style/AppStyle.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/settingsProvider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "Home";
@@ -26,10 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SettingsProvider provider = Provider.of<SettingsProvider>(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(AppStyle.isDark
+            image: AssetImage(provider.themeMode==ThemeMode.dark
                 ? "assets/images/home_dark_background.png"
                 :  "assets/images/default_bg.png"),
             fit: BoxFit.fill,
@@ -82,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: Icon(
                     Icons.settings,
                   ),
-                  label: "Settings",
+                  label: AppLocalizations.of(context)!.settings,
                 ),
               ],
           ),

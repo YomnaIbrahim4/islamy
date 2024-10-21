@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Unselecteditem extends StatelessWidget {
   String unselected;
-  Unselecteditem({required this.unselected});
+  Unselecteditem(this.unselected);
 
   @override
   Widget build(BuildContext context) {
