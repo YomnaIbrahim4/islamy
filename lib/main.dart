@@ -7,29 +7,30 @@ import 'package:islami_project/quran_details/quran_details_screen.dart';
 import 'package:islami_project/style/AppStyle.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  final themeMode = prefs.getString("themeMode") ?? "light";
 
-  //new version
   runApp(ChangeNotifierProvider(
-    create: (context) => SettingsProvider(),
-      child: const MyApp()));
+    create: (context) => SettingsProvider(themeMode: themeMode),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     SettingsProvider settingsProvider = Provider.of<SettingsProvider>(context);
     return MaterialApp(
-      title: 'Flutter Demo',
-
+      title: "Islamy",
       theme: AppStyle.lightTheme,
       darkTheme: AppStyle.darkTheme,
       themeMode: settingsProvider.themeMode,
-
       localizationsDelegates: [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -43,11 +44,10 @@ class MyApp extends StatelessWidget {
       locale: Locale(settingsProvider.language),
       initialRoute: HomeScreen.routeName,
       routes: {
-        HomeScreen.routeName:(_)=>HomeScreen(),
-        QuranDetailsScreen.routeName:(_)=>QuranDetailsScreen(),
-        AhadethDetailsScreen.routName:(_)=>AhadethDetailsScreen(),
+        HomeScreen.routeName: (_) => HomeScreen(),
+        QuranDetailsScreen.routeName: (_) => QuranDetailsScreen(),
+        AhadethDetailsScreen.routName: (_) => AhadethDetailsScreen(),
       },
     );
   }
 }
-
