@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../sura_name_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> suraNames = [
@@ -35,7 +36,7 @@ class QuranTab extends StatelessWidget {
             Expanded(
               child: Text(
                 textAlign: TextAlign.center,
-                  "Sura Name",
+                 AppLocalizations.of(context)!.sura_name,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
@@ -48,7 +49,7 @@ class QuranTab extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                  "Verses Number",
+                  AppLocalizations.of(context)!.verses_number,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
