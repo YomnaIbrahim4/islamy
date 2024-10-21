@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Selecteditem extends StatelessWidget {
   String selected;
-   Selecteditem({required this.selected});
+   Selecteditem( this.selected);
 
   @override
   Widget build(BuildContext context) {

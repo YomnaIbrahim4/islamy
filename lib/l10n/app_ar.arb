@@ -3,9 +3,12 @@
   "sura_name": "اسم السورة",
   "verses_number": "عدد الآيات",
   "quran": "قرآن",
-  "ahadeth": "أحاديث",
+  "ahadeth": "الأحاديث",
   "tasbeeh": "تسبيح",
-  "radio": "إذاعة"
+  "radio": "إذاعة",
+  "settings": "الإعدادات",
+  "language": "اللغة",
+  "theme": "السمة"
 
 
 }
