@@ -23,6 +23,10 @@ class AppStyle{
       fontWeight: FontWeight.w400,
       color: Colors.black,
     ),
+      bodyLarge: TextStyle(
+          fontSize: 25,
+          color: Colors.black
+      ),
       displayMedium: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w400,
@@ -94,6 +98,10 @@ class AppStyle{
           fontSize: 20,
           fontWeight: FontWeight.w400,
           color: Colors.white,
+        ),
+        bodyLarge: TextStyle(
+          fontSize: 25,
+          color: Colors.white
         ),
         displayMedium: TextStyle(
           fontSize: 20,
