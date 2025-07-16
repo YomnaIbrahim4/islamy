@@ -70,7 +70,7 @@ class _SebhaTabState extends State<SebhaTab> with TickerProviderStateMixin{
             borderRadius: BorderRadius.circular(20),
           ),
         ),
-        InkWell(
+        GestureDetector(
           onTap: onClick,
           child: Container(
             padding: EdgeInsets.all(10),
